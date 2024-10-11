@@ -118,14 +118,31 @@ header {
 }
 
 .descend:hover {
-    animation: descendre 3s infinite linear;
+    animation: descendre 3s forwards; 
+}
+
+.descend:not(:hover) {
+    animation: remonter 3s forwards; 
 }
 
 @keyframes descendre {
-    from {
-        background-color: rgb(29, 221, 54);
+    0% {
+        background-color: rgb(24, 204, 204);
+        padding-bottom: 0px;
     }
-    to {
+    100% {
         background-color: rgb(251, 0, 0);
+        padding-bottom: 300px; 
+    }
+}
+
+@keyframes remonter {
+    0% {
+        background-color: rgb(251, 0, 0);
+        padding-bottom: 300px;
+    }
+    100% {
+        background-color: rgb(24, 204, 204);
+        padding-bottom: 0px; 
     }
 }
