@@ -155,3 +155,67 @@ header {
     }
 }
 
+.Attente{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+    width: 40%;
+    border: 1px solid black;
+    
+}
+
+#ball1, #ball2, #ball3, #ball4, #ball5{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+#ball1{
+    animation: attente 5s infinite;
+    background-color: #42c4db;
+}
+
+#ball2{
+    animation: attente 5s infinite 0.2s;
+    background-color: #e62bba;
+}
+
+#ball3{
+    animation: attente 5s infinite 0.4s;
+    background-color: #c7cd17;
+}
+
+#ball4{
+    animation: attente 5s infinite 0.6s;
+    background-color: #e01111;
+}
+
+#ball5{
+    animation: attente 5s infinite 0.6s;
+    background-color: #1ead3b;
+}
+
+@keyframes attente {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 100%;
+    }
+    50% {
+        top: 100%;
+        left: 100%;
+    }
+    75% {
+        top: 100%;
+        left: 0;
+    }
+}
