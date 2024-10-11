@@ -162,7 +162,6 @@ header {
     height: 40%;
     width: 40%;
     border: 1px solid black;
-    
 }
 
 #ball1, #ball2, #ball3, #ball4, #ball5{
@@ -174,6 +173,7 @@ header {
     align-items: center;
     top: 0;
     left: 0;
+    position: absolute;
 }
 
 #ball1{
@@ -182,29 +182,29 @@ header {
 }
 
 #ball2{
-    animation: attente 5s infinite 0.2s;
+    animation: attente 5s infinite 1s;
     background-color: #e62bba;
 }
 
 #ball3{
-    animation: attente 5s infinite 0.4s;
+    animation: attente 5s infinite 2s;
     background-color: #c7cd17;
 }
 
 #ball4{
-    animation: attente 5s infinite 0.6s;
+    animation: attente 5s infinite 3s;
     background-color: #e01111;
 }
 
 #ball5{
-    animation: attente 5s infinite 0.6s;
+    animation: attente 5s infinite 4s;
     background-color: #1ead3b;
 }
 
 @keyframes attente {
     0% {
-        top: 0;
-        left: 0;
+        top: 0%;
+        left: 0%;
     }
     25% {
         top: 0;
@@ -218,4 +218,20 @@ header {
         top: 100%;
         left: 0;
     }
+}
+
+.content3{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: calc(100vh - 100px);
+}
+
+.Anim3D {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    width: 40%;
+    border: 1px solid black;
 }
