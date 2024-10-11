@@ -77,3 +77,55 @@ header {
         transform: translateY(0);
     }
 }
+
+.load {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 19%;
+    gap: 10px;
+}
+
+.loader1, .loader2, .loader3 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(95, 206, 125);
+    border-color: black;
+    animation: load 3s infinite;
+    border-radius: 50%;
+}
+
+@keyframes load {
+    from {
+        background-color: rgb(29, 221, 54);
+    }
+    to {
+        background-color: rgb(251, 0, 0);
+    }
+}
+
+.content2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: calc(100vh - 100px);
+}
+
+.descend {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(24, 204, 204);
+}
+
+.descend:hover {
+    animation: descendre 3s infinite linear;
+}
+
+@keyframes descendre {
+    from {
+        background-color: rgb(29, 221, 54);
+    }
+    to {
+        background-color: rgb(251, 0, 0);
+    }
+}
