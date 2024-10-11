@@ -115,6 +115,14 @@ header {
     width: 100px;
     height: 100px;
     background-color: rgb(24, 204, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descend a {
+    text-decoration: none;
+    font-size: 1.2em; 
 }
 
 .descend:hover {
@@ -146,3 +154,4 @@ header {
         padding-bottom: 0px; 
     }
 }
+
