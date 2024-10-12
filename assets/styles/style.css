@@ -155,70 +155,83 @@ header {
     }
 }
 
-.Attente{
+.Attente {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 40%;
-    width: 40%;
+    height: 350px;
+    width: 600px;
     border: 1px solid black;
+    position: relative; 
 }
 
-#ball1, #ball2, #ball3, #ball4, #ball5{
+#ball1, #ball2, #ball3, #ball4, #ball5 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
-    left: 0;
     position: absolute;
+    animation: attente 5s infinite, rotation-sur-place 1s linear infinite; 
 }
 
-#ball1{
-    animation: attente 5s infinite;
+#ball1 {
     background-color: #42c4db;
 }
 
-#ball2{
-    animation: attente 5s infinite 1s;
+#ball2 {
     background-color: #e62bba;
+    animation-delay: 1s;
 }
 
-#ball3{
-    animation: attente 5s infinite 2s;
+#ball3 {
     background-color: #c7cd17;
+    animation-delay: 2s;
 }
 
-#ball4{
-    animation: attente 5s infinite 3s;
+#ball4 {
     background-color: #e01111;
+    animation-delay: 3s;
 }
 
-#ball5{
-    animation: attente 5s infinite 4s;
+#ball5 {
     background-color: #1ead3b;
+    animation-delay: 4s;
 }
 
 @keyframes attente {
     0% {
-        top: 0%;
-        left: 0%;
-    }
-    25% {
         top: 0;
-        left: 100%;
+        left: 0;
     }
-    50% {
-        top: 100%;
-        left: 100%;
+    30% {
+        top: 0;
+        left: calc(100% - 40px);
+    }
+    65% {
+        top: calc(100% - 40px);
+        left: calc(100% - 40px);
     }
     75% {
-        top: 100%;
+        top: calc(100% - 40px);
+        left: 0;
+    }
+    100% {
+        top: 0;
         left: 0;
     }
 }
+
+@keyframes rotation-sur-place {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 .content3{
     display: flex;
