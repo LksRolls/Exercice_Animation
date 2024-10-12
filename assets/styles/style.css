@@ -10,7 +10,7 @@ header {
     align-items: center;
     width: 100%;
     height: 100px;
-    background-color: #6daded;
+    background-color: #1877d7;
     color: whitesmoke;
     font-size: 1.5em;
     margin: 0;
@@ -21,14 +21,31 @@ header {
     justify-content: space-around;
     align-items: flex-start;
     height: calc(100vh - 100px);
-    padding-top: 20%;
+    padding-top: 12%;
 }
 
-.carre {
+.container-carre {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carre1 {
     width: 100px;
     height: 100px;
     background-color: rgb(24, 204, 204);
     animation: rotation 3s infinite linear;
+}
+
+.carre2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(16, 208, 112);
+    animation: rotation2 3s infinite linear;
 }
 
 @keyframes rotation {
@@ -40,12 +57,35 @@ header {
     }
 }
 
+@keyframes rotation2 {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.container-balle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100px;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black; 
+}
+
 .balle {
     width: 50px;
     height: 50px;
-    background-color: #e74c3c;
+    background-color: red; 
     border-radius: 50%;
-    animation: rebondir 5s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
+    position: absolute;
+    bottom: 0;
+    animation: rebondir 4s ease infinite;
 }
 
 @keyframes rebondir {
@@ -53,43 +93,45 @@ header {
         transform: translateY(0);
     }
     20% {
-        transform: translateY(-300px);
+        transform: translateY(-350px); 
     }
     40% {
         transform: translateY(0);
     }
     55% {
-        transform: translateY(-200px);
+        transform: translateY(-250px);
     }
     70% {
         transform: translateY(0);
     }
     80% {
-        transform: translateY(-100px);
+        transform: translateY(-150px);
     }
     90% {
         transform: translateY(0);
     }
     95% {
-        transform: translateY(-50px);
+        transform: translateY(-75px);
     }
     100% {
         transform: translateY(0);
     }
 }
 
+
 .load {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 19%;
+    width: 20%;
     gap: 10px;
+    margin-top: 120px;
 }
 
 .loader1, .loader2, .loader3 {
     width: 100px;
     height: 100px;
-    background-color: rgb(95, 206, 125);
+    background-color: black;
     border-color: black;
     animation: load 3s infinite;
     border-radius: 50%;
@@ -97,10 +139,10 @@ header {
 
 @keyframes load {
     from {
-        background-color: rgb(29, 221, 54);
+        background-color:black;
     }
     to {
-        background-color: rgb(251, 0, 0);
+        background-color: rgb(0, 255, 4);
     }
 }
 
@@ -114,10 +156,11 @@ header {
 .descend {
     width: 100px;
     height: 100px;
-    background-color: rgb(24, 204, 204);
+    background-color: rgb(204, 24, 24);
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .descend a {
@@ -135,11 +178,11 @@ header {
 
 @keyframes descendre {
     0% {
-        background-color: rgb(24, 204, 204);
+        background-color: rgb(204, 24, 24);
         padding-bottom: 0px;
     }
     100% {
-        background-color: rgb(251, 0, 0);
+        background-color: rgb(207, 193, 0);
         padding-bottom: 300px; 
     }
 }
@@ -150,7 +193,7 @@ header {
         padding-bottom: 300px;
     }
     100% {
-        background-color: rgb(24, 204, 204);
+        background-color: rgb(207, 193, 0);
         padding-bottom: 0px; 
     }
 }
@@ -232,8 +275,7 @@ header {
     }
 }
 
-
-.content3{
+.content3 {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
