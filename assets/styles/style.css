@@ -348,60 +348,81 @@ header {
 }
 
 .planet {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
     position: absolute; 
+    border-radius: 50%;
 }
 
 .soleil {
-    background-color: #f7d217;
-    width: 150px;
+    background-image: url(/assets/img/soleil.png);
+    background-size: cover; /* Pour s'assurer que l'image se redimensionne bien */
+    background-position: center;
+    width: 150px; /* Taille fixe adaptée */
     height: 150px;
     z-index: 10; 
-    position: absolute;
-    left: calc(50% - 75px); 
-    top: calc(50% - 75px);  
+    left: calc(50% - 75px); /* Centrage horizontal */
+    top: calc(50% - 75px);  /* Centrage vertical */
 }
 
 .mercure {
-    background-color: #647e97;
-    animation: rotateMercure 5s infinite linear;
+    background-image: url(/assets/img/Mercure.png);
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    z-index: 10;
+    left: calc(50% - 100px); 
+    top: calc(50% - 100px);  
+    animation: rotateMercure 3s infinite linear;
 }
 
 .venus {
-    background-color: #d17e03;
-    animation: rotateVenus 7s infinite linear;
+    background-image: url(/assets/img/Venus.png);
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    z-index: 10;
+    left: calc(50% - 150px); 
+    top: calc(50% - 150px);  
+    animation: rotateVenus 5s infinite linear;
 }
 
 .terre {
-    background-color: #0d7e0d;
-    animation: rotateTerre 10s infinite linear;
+    background-image: url(/assets/img/terre.png);
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    z-index: 10;
+    left: calc(50% - 200px); 
+    top: calc(50% - 200px);  
+    animation: rotateTerre 7s infinite linear;
 }
+
 
 @keyframes rotateMercure {
     0% {
-        transform: rotate(0deg) translateX(150px) rotate(0deg); 
+        transform: rotate(0deg) translateX(200px) rotate(0deg); 
     }
     100% {
-        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
     }
 }
 
 @keyframes rotateVenus {
     0% {
-        transform: rotate(0deg) translateX(250px) rotate(0deg); 
+        transform: rotate(0deg) translateX(300px) rotate(0deg); 
     }
     100% {
-        transform: rotate(360deg) translateX(250px) rotate(-360deg);
+        transform: rotate(360deg) translateX(300px) rotate(-360deg); 
     }
 }
 
 @keyframes rotateTerre {
     0% {
-        transform: rotate(0deg) translateX(350px) rotate(0deg); 
+        transform: rotate(0deg) translateX(400px) rotate(0deg); 
     }
     100% {
-        transform: rotate(360deg) translateX(350px) rotate(-360deg);
+        transform: rotate(360deg) translateX(400px) rotate(-360deg); 
     }
 }
